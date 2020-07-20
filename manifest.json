@@ -1,0 +1,35 @@
+{
+    "description": "Summarize long articles on news sites across the web with a single click!",
+    "manifest_version": 2,
+    "name": "SumIt!",
+    "version": "1.1.0",
+    "content_scripts" : [
+        {
+            "js": ["jquery-3.5.1.min.js","content.js"],
+            "matches": [
+                "<all_urls>"
+            ]
+            
+        }
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "browser_action": {
+      "browser_style": true,
+      "default_popup": "popup.html",
+      "default_title": "SumIt!",
+      "default_icon": {
+        "16": "images/SumIt_16.png",
+        "48": "images/SumIt_48.png",
+        "128": "images/SumIt_128.png"
+      }
+    },
+    "permissions": ["tabs", "<all_urls>", "activeTab", "declarativeContent", "storage"],
+    "icons": {
+      "16": "images/SumIt_16.png",
+      "48": "images/SumIt_48.png",
+      "128": "images/SumIt_128.png"
+    }
+}
