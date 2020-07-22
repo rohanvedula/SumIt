@@ -1,4 +1,4 @@
-console.log("running");
+console.log("Currently running. Contact rohan#3001 with questions or concerns.");
 
 /*chrome.browserAction.onClicked.addListener(buttonClicked)
 
